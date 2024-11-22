@@ -1,0 +1,241 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Light Mode Colors */
+:root[color-mode="light"] {
+    --body-bg-color: #f6f8ff;
+    --text-color: #222731;
+    --secondary-text-color: #697c9a;
+    --input-bg-color: #ffffff;
+    --highlight-color: #0079ff;
+    --box-bg-color: #fefefe;
+}
+
+/* Dark Mode Colors */
+:root[color-mode="dark"] {
+    --body-bg-color: #141d2f;
+    --text-color: #ffffff;
+    --secondary-text-color: #ffffff;
+    --input-bg-color: #1e2a47;
+    --highlight-color: #0079ff;
+    --box-bg-color: #1e2a47;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 730px;
+    margin-bottom: 25px;
+}
+
+.head {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.color-mode_btn {
+    font-size: 14px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.hipe {
+    width: 20px;
+    height: 20px;
+}
+
+.search {
+    width: 730px;
+    display: flex;
+    align-items: center;
+    background-color: var(--box-bg-color);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.searchText {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchText input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: var(--text-color);
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.searchbtn {
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.resultBody {
+    width: 730px;
+    background-color: var(--box-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mainImg {
+    width: 100px;
+    height: 100px;
+    background-color: var(--input-bg-color);
+    border-radius: 50%;
+    border: 1px solid var(--secondary-text-color);
+}
+
+.githubInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.githubUserName a {
+    text-decoration: none;
+    color: var(--highlight-color);
+}
+
+.githubRepo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--input-bg-color);
+    height: 85px;
+    width: 480px;
+    border-radius: 10px;
+}
+
+.githubSocial {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+/* Ensure the profile image container has a size */
+.mainImg {
+    width: 120px; /* Adjust the width as per your layout */
+    height: 120px; /* Adjust the height as per your layout */
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center; /* Ensure the image is centered */
+    background-repeat: no-repeat;
+}
+
+/* Optional: Adjust other styles for .mainImg and container */
+.githubhead {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.githubSocial div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.repoHeading,
+.followerHeading,
+.followingHeading{
+    font-size: 13px;
+    color: var(--follow-color);
+}
+
+.repoTotal,
+.followerTotal,
+.followingTotal {
+    font-size: 22px;
+    color: var(--followTotal-color);
+    font-weight: bold;
+}
+
+.githubSocial{
+    display: grid;
+    grid-template-columns: 240px 240px;
+    row-gap: 1.2em;
+    color: var(--social-color);
+    margin-top: 30px;
+}
+
+.location,
+.twitter,
+.website,
+.company {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.location img,
+.twitter img,
+.website img,
+.company img {
+    margin-right: 10px ;
+}
+
+@media screen and (max-width: 769px) {
+    header,
+    .search {
+        width: 574px;
+    }
+    .searchText{
+        width: 400px;
+    }
+    .resultBody{
+        width: 573px;
+        height: 481px;
+    }
+
+    .githubHead, 
+    .githubRepo, 
+    .githubSocial {
+        width: 493px;
+
+    }
+    .githubInfo{
+        width: 350px;
+    }
+
+    .githubJoinedDate {
+        top: 70px;
+        left: 0;
+    }
+    .git{
+        width: 493px;
+        align-items: flex-start;
+    }
+
+}
